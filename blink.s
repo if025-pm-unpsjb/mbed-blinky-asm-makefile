@@ -53,7 +53,8 @@ _start:
                            // [r0], with immediate offset (unsigned byte).
    mov  r2, #0xB4          // store ‭the value 10110100‬ in r2, this value is used
                            // to change the direction mode of the GPIOs pins
-                           // into which the mbed LPC1768 to output.
+                           // into which the mbed LPC1768 LEDs are connected to
+                           // output.
    orr  r1, r2             // logical OR between r1 and r2 registers.
    strb r1, [r0]           // store register r1 value into memory adress [r0].
 
