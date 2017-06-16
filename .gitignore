@@ -50,3 +50,15 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Eclipse project files
+.project
+.cproject
+language.settings.xml
+*.launch
+
+# Other
+*.pdf
+*.rhistory
+Makefile.mine
+*.list
