@@ -49,17 +49,23 @@ _start:
    ldr  r0, =0x2009C022    // load memory address 0x2009C022 into r0 register,
                            // this is the port direction register FIO1DIR2, see
                            // page 134 in LPC17xx manual.
+
    ldrb r1, [r0]           // load in r1 the value store in the memory address
                            // [r0], with immediate offset (unsigned byte).
+
    mov  r2, #0xB4          // store ‭the value 10110100‬ in r2, this value is used
                            // to change the direction mode of the GPIOs pins
                            // into which the mbed LPC1768 LEDs are connected to
                            // output.
+
    orr  r1, r2             // logical OR between r1 and r2 registers.
+
    strb r1, [r0]           // store register r1 value into memory adress [r0].
 
    ldr  r0, =0x2009C03A    // set gpio (FIO1SET2, see page 135 in LPC17xx manual)
+
    ldr  r1, =0x2009C03E    // clear gpio (FIO1CLR2, see page 136 in LPC17xx manual)
+
    ldr  r2, =0x04          // store the value 0100 in r2
 
 mainloop:
