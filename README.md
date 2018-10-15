@@ -52,6 +52,7 @@ A continuación se creará y ejecutará una configuración de *debug*:
 * Luego, en el panel derecho:
     * En la pestaña **[Main]**, el campo *Project* debe indicar el nombre del proyecto (`mbed-blinky-asm-makefile`). El campo *C/C++ Application* debe indicar el nombre del archivo ELF, en este caso `blink.elf`. Si no estuviera presente escribir el nombre del mismo, o bien hacer clic en el botón **[Search project]** o **[Browse]** para buscarlo.
     * En la pestaña **[Debugger]**, el campo *Executable* debe contener el valor `${pyocd_path}\${pyocd_executable}`. Estas dos variables son reemplazadas por los valores especificados el menú **[MCU > PyOCD]**.
+    * En la pestaña **[Startup]**, en la sección **[Run/Restart commands]**, reemplazar `main` por `_start` en el campo *Set breakpoint at*.
     * En la pestaña **[Common]**, seleccionar la opción **[Shared file:]**, indicando en el campo el nombre del proyecto. De esta manera la configuración para debugging es guardada en un archivo `*.launch` dentro del proyecto.
     * Hacer clic en el botón **[Apply]**. No cerrar la ventana aún.
     
