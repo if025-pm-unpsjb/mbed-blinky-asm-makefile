@@ -43,8 +43,8 @@ Si el proyecto compilo correctamente, en la vista **[Console]** debe indicarse q
 ## Configurar entorno PyOCD
 Primero, verificar que el `pyocd-gdbserver` este correctamente configurado en Eclipse:
 * Seleccionar **[Windows > Preferences]** en el menú de Eclipse.
-* En la nueva ventana, seleccionar **[Run / Debug > PyOCD]** en la lista izquierda.
-* En el campo *Executable* debe indicar `pyocd-gdbserver.exe` (sin la extensión en Linux o MacOS), y el campo *Folder* debe contener el *path* al ejecutable (en Windows `C:\Python27\Scripts`).
+* En la nueva ventana, seleccionar **[MCU > Global pyOCD Path]** en la lista izquierda.
+* En el campo *Executable* debe indicar `pyocd-gdbserver.exe` (sin la extensión en Linux o MacOS), y el campo *Folder* debe contener el *path* al ejecutable (por ejemplo, en Windows `C:\Python27\Scripts`).
 * Hacer clic en **[Ok]**.
 
 A continuación se creará y ejecutará una configuración de *debug*:
@@ -62,6 +62,3 @@ Para ejecutar el programa por primera vez, conectar la placa si no lo estuviera 
     
 ## Próximas ejecuciones
 Para cargar el programa en la placa y ejecutarlo, la opción más sencilla es hacer clic ícono **[Debug]** en la barra de herramientas de Eclipse, que ejecuta el último perfil seleccionado. Si se desea cambiar el perfil, hacer clic en la flecha que se encuentra junto al ícono **[Debug]**, y de la lista desplegable que se presenta, seleccionar el proyecto, o bien hacer clic en **[Debug Configurations...]**, que abre la ventana de configuración del punto anterior.
-
-
-
