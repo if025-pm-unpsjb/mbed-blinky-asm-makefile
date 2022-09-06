@@ -16,15 +16,15 @@ Clonar el proyecto usando Git:
 
 ## Importar el proyecto en Eclipse
 Una vez clonado localmente, agregar el proyecto en Eclipse:
-* Seleccionar **[File > Makefile project with existing code]**. 
+* Seleccionar **[File > New > Makefile project with existing code]**. 
 * En la nueva ventana:
     * En **[Existing Code Location]** indicar el *path* al proyecto (usar el botón **[Browse...]**).
-    * En **[Toolchain for Indexer]** seleccionar la opción *Cross ARM GCC* (¡importante!).
+    * En **[Toolchain for Indexer]** seleccionar la opción *ARM Cross GCC* (¡importante!).
 
 El proyecto debe aparecer ahora en la vista *Project Explorer*: 
 * Hacer clic derecho sobre el mismo, y seleccionar **[Properties]** en el menú contextual.
 * En la nueva ventana, seleccionar **[C/C++ Build > Settings]**. En la sección derecha de la ventana, en la pestaña **[Toolchains]**, el campo *Name* debe indicar *GNU MCU Eclipse ARM Embedded GCC (arm-none-eabi-gcc)* o bien *GNU Tools for ARM Embedded Processors*.
-* Hacer clic en **[Ok]**.
+* Hacer clic en **[Apply and Close]**.
 
 ---
 
@@ -42,8 +42,8 @@ Si el proyecto compilo correctamente, en la vista **[Console]** debe indicarse q
 Primero, verificar que el `pyocd-gdbserver` este correctamente configurado en Eclipse:
 * Seleccionar **[Windows > Preferences]** en el menú de Eclipse.
 * En la nueva ventana, seleccionar **[MCU > Global pyOCD Path]** en la lista izquierda.
-* En el campo *Executable* debe indicar `pyocd-gdbserver.exe` (sin la extensión en Linux o MacOS), y el campo *Folder* debe contener el *path* al ejecutable (por ejemplo, en Windows `C:\Python27\Scripts`).
-* Hacer clic en **[Ok]**.
+* En el campo *Executable* debe indicar `pyocd-gdbserver.exe` (sin la extensión en Linux o MacOS), y el campo *Folder* debe contener el *path* al ejecutable (por ejemplo `C:\Python27\Scripts` o el directorio creado con `virtualenv`).
+* Hacer clic en **[Apply and Close]**.
 
 A continuación se creará y ejecutará una configuración de *debug*:
 * Seleccionar **[Run > Debug Configurations...]** en el menú de Eclipse.
